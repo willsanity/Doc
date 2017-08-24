@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ArrayPosition {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		System.out.println("25,16,90,34,7,10");
+		System.out.println("Pick a number and Enter the number to be searched");
+		
+		try {
+			ArrayPosition.Position();
+		} catch (Exception e) {
+			System.out.println("Key in Number Only");
+		}
+
+	}
+
+	public static void Position() {
+		int x = sc.nextInt();
+		int iVariable[] = { 25, 16, 90, 34, 7, 10 };
+
+		for (int i = 0; i < iVariable.length; i++) {
+			if (iVariable[i] == x) {
+				System.out.println(x + " Element is present at index " + i);
+			}
+
+		}
+	}
+}
